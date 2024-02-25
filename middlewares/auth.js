@@ -1,6 +1,6 @@
 import jwt from "jsonwebtoken";
 import { cathAsynError } from "./cathAsyncError.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
+import ErrorHandler from "../utils/errorHandler.js";
 import { userServices } from "../services/userServices.js";
 const { findUser } = userServices;
 

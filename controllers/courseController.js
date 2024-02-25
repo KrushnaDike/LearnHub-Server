@@ -9,7 +9,6 @@ import Course from "../models/Course.js";
 import Stats from "../models/Stats.js";
 
 export const getAllCourses = cathAsynError(async (req, res, next) => {
-
   const keyword = req.query.keyword || "";
   const category = req.query.category || "";
 

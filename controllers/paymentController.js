@@ -1,7 +1,7 @@
 import { cathAsynError } from "../middlewares/cathAsyncError.js";
 import { userServices } from "../services/userServices.js";
 import { paymentServices } from "../services/paymentServices.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
+import ErrorHandler from "../utils/errorHandler.js";
 import crypto from "crypto";
 
 import { instance } from "../server.js";

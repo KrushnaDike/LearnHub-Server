@@ -1,5 +1,5 @@
 import { cathAsynError } from "../middlewares/cathAsyncError.js";
-import ErrorHandler from "../utils/ErrorHandler.js";
+import ErrorHandler from "../utils/errorHandler.js";
 import cloudinary from "cloudinary";
 import { courseServices } from "../services/courseServices.js";
 const { findAllCourses, createACourse, findCourse, findAndDelete } =

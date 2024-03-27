@@ -224,14 +224,12 @@ export const forgetPassword = cathAsynError(async (req, res, next) => {
 export const resetPassword = cathAsynError(async (req, res, next) => {
   const { token } = req.params;
 
-  const resetPasswordToken = crypto
-    .createHash("sha256")
-    .update(token)
-    .digest("hex");
+  // const resetPasswordToken = crypto
+  //   .createHash("sha256")
+  //   .update(token)
+  //   .digest("hex");
 
-  console.log("resetPasswordToken: ",resetPasswordToken);
-
-  const user = await checkUserExistsWithResetToken(resetPasswordToken);
+  const user = await checkUserExistsWithResetToken(token);
   if (!user) {
     return next(new ErrorHandler("Token is invalid or has been expired.", 401));
   }

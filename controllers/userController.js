@@ -229,6 +229,8 @@ export const resetPassword = cathAsynError(async (req, res, next) => {
     .update(token)
     .digest("hex");
 
+  console.log("resetPasswordToken: ",resetPasswordToken);
+
   const user = await checkUserExistsWithResetToken(resetPasswordToken);
   if (!user) {
     return next(new ErrorHandler("Token is invalid or has been expired.", 401));

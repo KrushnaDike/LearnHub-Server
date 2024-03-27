@@ -207,6 +207,7 @@ export const forgetPassword = cathAsynError(async (req, res, next) => {
   }
 
   const resetToken = await user.getResetToken();
+  user.resetPasswordToken = resetToken;
   await user.save();
 
   // send token via email

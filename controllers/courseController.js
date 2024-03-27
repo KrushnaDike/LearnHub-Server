@@ -14,10 +14,6 @@ export const getAllCourses = cathAsynError(async (req, res, next) => {
 
   const courses = await findAllCourses(keyword, category);
 
-  if (!courses || courses.length === 0) {
-    return next(new ErrorHandler("Courses are empty", 200));
-  }
-
   return res.status(200).json({
     success: true,
     courses,
